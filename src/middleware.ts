@@ -26,3 +26,15 @@ export const config = {
     '/verifyemail'
   ]
 }
+
+
+/**
+ * 
+Purpose: The middleware enforces authentication and redirects users based on whether they have a valid token.
+Public Paths: /login, /signup, /verifyemail (accessible without a token).
+Protected Paths: /profile, / (require a token).
+Redirects:
+Authenticated users on public paths → /.
+Unauthenticated users on protected paths → /login.
+ * 
+ */
